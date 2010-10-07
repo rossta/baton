@@ -22,3 +22,8 @@ end
 
 desc "Run the specs"
 task :default => :spec
+
+desc "Run the jasmine specs"
+task :jasmine do
+  system "node specs.js"
+end

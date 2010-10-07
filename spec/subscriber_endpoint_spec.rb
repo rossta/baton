@@ -8,7 +8,7 @@ describe "subscriber endpoint" do
         start_server
         put('http://0.0.0.0:8080/rt', '').code.to_i.should == 405
         post('http://0.0.0.0:8080/rt', '').code.to_i.should == 405
-        delete('http://0.0.0.0:8080/rt').code.to_i.should == 405
+        del('http://0.0.0.0:8080/rt').code.to_i.should == 405
       ensure
         stop_server
       end
