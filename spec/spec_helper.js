@@ -1,6 +1,3 @@
-beforeEach(function() {
-});
-
 clientServer = function(host, port, callback) {
   var http = require('http');
   var client = http.createClient(port, host);
@@ -8,7 +5,12 @@ clientServer = function(host, port, callback) {
 };
 
 startServer = function () {
-  require("../server.js");
+  return require("../server.js");
+};
+
+stopServer = function(s) {
+  // s.getPublisherServer().close();
+  // s.getSubscriberServer().close();
 };
 
 put = function(endpoint, requestBody, callback) { return request('PUT', endpoint, requestBody, null, callback); };

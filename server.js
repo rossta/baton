@@ -31,6 +31,14 @@ publisherServer = http.createServer(function(req, res) {
       send404(res);
       break;
   }
-});
+}),
+subscriberServer;
 publisherServer.listen(config.publishPort, config.publishIpAddress);
-sub.startSubscriberServer(config, channelManager);
+subscriberServer = sub.startSubscriberServer(config, channelManager);
+
+exports.getPublisherServer = function() {
+  return publisherServer;
+};
+exports.getSubscriberServer = function() {
+  return subscriberServer;
+};
