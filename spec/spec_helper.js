@@ -5,7 +5,7 @@ clientServer = function(host, port, callback) {
 };
 
 startServer = function () {
-  return require("../server.js");
+  return require("../baton.js");
 };
 
 stopServer = function(s) {
