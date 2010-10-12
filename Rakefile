@@ -30,3 +30,8 @@ task "npm:install" do
     `npm install #{line}`
   end
 end
+
+desc "Run the jasmine specs"
+task :jasmine do
+  system "node specs.js"
+end
